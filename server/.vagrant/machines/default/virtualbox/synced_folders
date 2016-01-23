@@ -1,0 +1,1 @@
+{"virtualbox":{"/uon":{"guestpath":"/uon","hostpath":"/Users/ains/Projects/ephemeral-mondo/server","disabled":false},"vagrant-cache":{"id":"vagrant-cache","guestpath":"/tmp/vagrant-cache","hostpath":"/Users/ains/.vagrant.d/cache/ubuntu/trusty64","disabled":false}}}
