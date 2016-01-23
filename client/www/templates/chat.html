@@ -1,5 +1,11 @@
-<ion-view title="Chat">
+<ion-view title="{{ thread.name }}">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-        <form class="list"></form>
+        <div ng-repeat="message in messages" class="ChatMessage">
+            <p class="ChatMessage-body">{{ message.body }}</p>
+            <p class="ChatMessage-sender">
+                <small class="ChatMessage-senderName">{{ message.sender.name }}</small>
+                <small class="ChatMessage-sendTime">{{ message.time_sent }}</small>
+            </p>
+        </div>
     </ion-content>
 </ion-view>

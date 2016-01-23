@@ -1,0 +1,15 @@
+.ChatMessage {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.ChatMessage-body {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: rgba(black, 0.1);
+    margin-bottom: 0;
+}
+
+.ChatMessage-sender {
+    margin-left: 5px;
+}

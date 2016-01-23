@@ -1,0 +1,10 @@
+<ion-view title="{{ thread.name }}">
+    <ion-tabs class="tabs-stable tabs-icon-top">
+        <ion-tab title="Chat" icon="ion-ios-chatbubble" ui-sref="app.threads.detail.chat({ threadID: thread.id })">
+            <ion-nav-view name="chatTab"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Payments" icon="ion-cash" ui-sref="app.threads.detail.payments({ threadID: thread.id })">
+            <ion-nav-view name="paymentsTab"></ion-nav-view>
+        </ion-tab>
+    </ion-tabs>
+</ion-view>

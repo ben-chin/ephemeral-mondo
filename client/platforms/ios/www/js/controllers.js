@@ -1,18 +1,1 @@
-angular.module('app.controllers', [])
-        
-.controller('groupsCtrl', function($scope) {
-
-})
-   
-.controller('chatCtrl', function($scope) {
-
-})
-   
-.controller('paymentsCtrl', function($scope) {
-
-})
-   
-.controller('invitesCtrl', function($scope) {
-
-})
- 
+angular.module("app.controllers",["app.services"]).controller("threadsCtrl",["$scope","ThreadsService",function(e,r){e.threads=r.getThreads()}]).controller("threadCtrl",["$scope","thread",function(e,r){e.thread=r}]).controller("chatCtrl",["$scope","thread","messages",function(e,r,t){e.messages=t}]).controller("paymentsCtrl",["$scope","thread","payments",function(e,r,t){e.payments=t}]).controller("invitesCtrl",["$scope",function(){}]);

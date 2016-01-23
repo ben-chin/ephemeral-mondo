@@ -1,0 +1,25 @@
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button class="button-icon icon ion-ios-arrow-back"></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle=""></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="sideMenu"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-header-bar class="bar-stable">
+            <div class="title">Logo</div>
+        </ion-header-bar>
+        <ion-content padding="false" class="side-menu-left has-header" <="" ion-content="">
+            <ion-list>
+                <ion-item ui-sref="app.threads.index" menu-close="">Groups</ion-item>
+                <ion-item>Transactions</ion-item>
+                <ion-item ui-sref="app.invites" menu-close="">Invites</ion-item>
+                <ion-item>Create Group +</ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
+<ion-nav-view></ion-nav-view>

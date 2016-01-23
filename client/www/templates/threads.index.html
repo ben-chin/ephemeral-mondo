@@ -1,0 +1,11 @@
+<ion-view title="Groups">
+    <ion-content overflow-scroll="true" padding="false" class="has-header">
+        <ion-list>
+            <ion-item ng-repeat="thread in threads" class="item-thumbnail-left" ui-sref="app.threads.detail.chat({ threadID: thread.id })">
+                <img ng-src="{{ thread.imageUrl }}">
+                <h2>{{ thread.name }}</h2>
+                <p>{{ thread.description }}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
