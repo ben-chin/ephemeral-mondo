@@ -1,0 +1,58 @@
+<ion-view view-title="Welcome!">
+    <ion-nav-bar class="bar-positive">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="clearSettings()" ng-if="settings !== null">
+            Clear
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content class="padding">
+        <div class="list card">
+            <a class="item item-icon-left assertive" href="#">
+                <i class="icon ion-home"></i>
+                Where's home?
+            </a>
+
+            <div class="item item-text-wrap">
+                <label class="item item-input item-stacked-label">
+                    <ion-google-place placeholder="{{ form.location || 'Enter an address, place or ZIP code' }}" ng-model="form.location"/>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="list card">
+            <a class="item item-icon-left assertive" href="#">
+                <i class="icon ion-card"></i>
+                How much is your time worth?
+            </a>
+
+            <div class="item item-text-wrap">
+                <div class="range">
+                    <i class="icon ion-social-usd-outline"></i>
+                    <input type="range" name="timeValue" ng-model="form.timeValue" min="0" max="100">
+                    <i class="icon ion-social-usd"></i>
+                </div>
+
+                <div class="row">
+                    <div class="col col-33 col-offset-33">
+                        <span ng-if="form.timeValue <= 30" class="calm">Frugal</span>
+                        <span ng-if="form.timeValue > 30 && form.timeValue <= 60" class="balanced">Sensible</span>
+                        <span ng-if="form.timeValue > 60 && form.timeValue <= 90" class="energized">Wealthy</span>
+                        <span ng-if="form.timeValue > 90 && form.timeValue <= 100" class="assertive">I Am Rich</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="button button-block button-positive" ng-click="saveSettings()">
+            Continue
+        </button>
+
+    </ion-content>
+</ion-view>
